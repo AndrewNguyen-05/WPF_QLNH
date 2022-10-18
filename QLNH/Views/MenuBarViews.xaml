@@ -1,0 +1,134 @@
+﻿<UserControl x:Class="QLNH.Views.MenuBarViews"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:QLNH.Views"
+             mc:Ignorable="d" 
+             x:Name="MenuBarViewsName"
+             d:DesignHeight="720" d:DesignWidth="1280">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="330"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="16"/>
+            <RowDefinition Height="118"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Background="White" 
+              Grid.Column="0" 
+              Grid.Row="0" 
+              Grid.RowSpan="3">
+        </Grid>
+        <Grid Background="#FAFAFA" 
+              Grid.Column="1" 
+              Grid.Row="0" 
+              Grid.RowSpan="3"/>
+        <Grid Grid.Row="1" Grid.Column="0">
+            <TextBlock Text="QLNH"
+                       FontSize="60"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       Foreground="#605DEC" 
+                       FontWeight="Bold"
+                       />
+        </Grid>
+        <Grid Grid.Column="0" 
+              Grid.Row="2" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+            <StackPanel x:Name="MenuButtonStack"
+                        Grid.Row="0">
+                <local:MenuBarButtonViews Title = "Thống kê" 
+                                          Type="1"
+                                          ImgDirectory="../Resources/Icons/Dashboard.png"
+                                          IsCheckedChanged="MenuBarButtonViews_IsCheckedChanged"
+                                          IsChecked="True"/>
+                <local:MenuBarButtonViews Title = "Bàn ăn"
+                                          Type="2"
+                                          ImgDirectory="../Resources/Icons/Table.png"
+                                          IsCheckedChanged="MenuBarButtonViews_IsCheckedChanged"/>
+                <local:MenuBarButtonViews Title = "Món ăn"
+                                          Type="3"
+                                          ImgDirectory="../Resources/Icons/Food Menu.png"
+                                          IsCheckedChanged="MenuBarButtonViews_IsCheckedChanged"/>
+                <local:MenuBarButtonViews Title = "Nhân viên"
+                                          Type="4"
+                                          ImgDirectory="../Resources/Icons/Employee.png"
+                                          IsCheckedChanged="MenuBarButtonViews_IsCheckedChanged"/>
+                <local:MenuBarButtonViews Title = "Kho hàng"
+                                          Type="5"
+                                          ImgDirectory="../Resources/Icons/Warehouse.png"
+                                          IsCheckedChanged="MenuBarButtonViews_IsCheckedChanged"/>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="1"
+              Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="688"/>
+                <ColumnDefinition Width="226"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="36"/>
+                    <ColumnDefinition Width="320"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="1">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="12"/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="12"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image x:Name="CurrentImg" 
+                               MaxWidth="40" 
+                               MinWidth="40"
+                               MaxHeight="40"
+                               MinHeight="40"
+                               Grid.Column="1"
+                               />
+                        <TextBlock x:Name="CurrentTitle"
+                                   FontSize="24"
+                                   Grid.Column="3"
+                                   VerticalAlignment="Center"
+                                   />       
+                    </Grid>
+                </Grid>
+            </Grid>
+            <!--<Button Grid.Column="1" 
+                    Background="Transparent"
+                    BorderBrush="Transparent"
+                    Margin="0,39">
+                <Image Source="..\Resources\Icons\Notification.png"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"/>
+            </Button>
+            <Button Grid.Column="3" 
+                    Background="Transparent"
+                    BorderBrush="Transparent"
+                    Margin="0,39">
+                <Image Source="..\Resources\Icons\Mails.png"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"/>
+            </Button>
+            <Button Grid.Column="5" 
+                    Background="Transparent"
+                    BorderBrush="Transparent"
+                    Margin="0,39">
+                <Image Source="..\Resources\Icons\Clock.png"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"/>
+            </Button>-->
+        </Grid>
+        <Grid x:Name="CurrentMain"
+              Grid.Row="2" 
+              Grid.Column="2"
+              />
+    </Grid>
+</UserControl>

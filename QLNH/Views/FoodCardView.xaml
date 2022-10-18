@@ -1,0 +1,85 @@
+﻿<UserControl x:Class="QLNH.Views.FoodCardView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:QLNH.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="400" d:DesignWidth="300">
+    <StackPanel Width="269" Height="384" Orientation="Vertical">
+        <Button Width="269" Height="237"
+                x:Name="ChangeImgButton"
+                Click="ChangeImgButton_Click">
+            <Image Width="269" Height="237"
+                   x:Name="Img"/>
+        </Button>
+        <StackPanel Width="269" Height="147" Orientation="Vertical" Background="#FFFFFF">
+            <StackPanel Width="221" Height="25" Orientation="Horizontal" Margin="4,12,0,0">
+                <TextBlock HorizontalAlignment="Left" Width="102" Height="25"
+                           Text="Tên món ăn:"
+                           TextAlignment="Left"
+                           FontFamily="Nunito Sans"
+                           FontSize="18" FontWeight="Bold"
+                           Foreground="#6E7491"
+                           ></TextBlock>
+                <TextBox HorizontalAlignment="Right" Width="111" Height="25"
+                           Text="Pizza"
+                           TextAlignment="Right"
+                           FontFamily="Nunito Sans"
+                           FontSize="18" FontWeight="Black"
+                           Foreground="#605DEC"
+                           BorderBrush="Transparent"
+                           x:Name="FoodName"
+                           ></TextBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Width="221" Height="22" Margin="4,5,0,0">
+                <TextBlock HorizontalAlignment="Left" Width="35" Height="22"
+                           Text="Loại:"
+                           TextAlignment="Left"
+                           FontFamily="Nunito Sans"
+                           FontSize="16" FontWeight="SemiBold"
+                           Foreground="#7C8DB0"
+                           ></TextBlock>
+                <TextBox HorizontalAlignment="Right" Width="178" Height="22"
+                           Text="Món chính"
+                           TextAlignment="Right"
+                           FontFamily="Nunito Sans"
+                           FontSize="16" FontWeight="Bold"
+                           Foreground="#7C8DB0"
+                           BorderBrush="Transparent"
+                           x:Name="FoodType"
+                           ></TextBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Width="221" Height="22" Margin="4,5,0,0">
+                <TextBlock HorizontalAlignment="Left" Width="60" Height="22" 
+                           Text="Giá tiền:"
+                           TextAlignment="Left"
+                           FontFamily="Nunito Sans"
+                           FontSize="16" FontWeight="SemiBold"
+                           Foreground="#7C8DB0"
+                           ></TextBlock>
+                <TextBox HorizontalAlignment="Right" Width="153" Height="22"
+                           Text="150,000 VND"
+                           TextAlignment="Right"
+                           FontFamily="Nunito Sans"
+                           FontSize="16" FontWeight="Bold"
+                           Foreground="#EB5757"
+                           BorderBrush="Transparent"
+                           x:Name="FoodPrice"
+                           ></TextBox>
+            </StackPanel>
+            <Button x:Name="DelFoodButton"
+                    Width="61"  Height="38" 
+                    HorizontalAlignment="Right" 
+                    Margin="0,3,34,0"
+                    FontFamily="Nunito Sans"
+                    FontSize="16" FontWeight="Bold"
+                    Background="#FFFFFF"
+                    Foreground="#EB5757" BorderBrush="#EB5757"
+                    Click="DelFoodButton_Click"
+                >Xóa</Button>
+        </StackPanel>
+    </StackPanel>
+</UserControl>

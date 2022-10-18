@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\Fonts\NunitoSans-Regular.ttf" />
+    <None Remove="Resources\Icons\Clock.png" />
+    <None Remove="Resources\Icons\Dashboard.png" />
+    <None Remove="Resources\Icons\Down.png" />
+    <None Remove="Resources\Icons\Employee.png" />
+    <None Remove="Resources\Icons\Food Menu.png" />
+    <None Remove="Resources\Icons\Mails.png" />
+    <None Remove="Resources\Icons\Notification.png" />
+    <None Remove="Resources\Icons\Search.png" />
+    <None Remove="Resources\Icons\Table.png" />
+    <None Remove="Resources\Icons\Warehouse.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Fonts\NunitoSans-Regular.ttf" />
+    <Resource Include="Resources\Icons\Clock.png" />
+    <Resource Include="Resources\Icons\Dashboard.png" />
+    <Resource Include="Resources\Icons\Down.png" />
+    <Resource Include="Resources\Icons\Employee.png" />
+    <Resource Include="Resources\Icons\Food Menu.png" />
+    <Resource Include="Resources\Icons\Mails.png" />
+    <Resource Include="Resources\Icons\Notification.png" />
+    <Resource Include="Resources\Icons\Search.png" />
+    <Resource Include="Resources\Icons\Table.png" />
+    <Resource Include="Resources\Icons\Warehouse.png" />
+  </ItemGroup>
+
+</Project>
